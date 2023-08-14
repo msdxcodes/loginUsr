@@ -8,7 +8,7 @@ public with sharing class loginUser {
             if(userRecord.size()==1){
                 for(Contact cc:userRecord)
             if(cc.Password__c==pWord){
-                message='success Login';
+                message='success Login Now';
             System.debug('Yes..EQUAL');
             }
             else if(cc.Password__c!=pWord){
