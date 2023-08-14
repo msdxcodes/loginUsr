@@ -9,7 +9,7 @@ public with sharing class loginUser {
                 for(Contact cc:userRecord)
             if(cc.Password__c==pWord){
                 message='success Login Now';
-            System.debug('Yes..EQUAL');
+            System.debug('Yes..EQUALs');
             }
             else if(cc.Password__c!=pWord){
               message='Wrong Password';
