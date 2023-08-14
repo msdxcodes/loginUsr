@@ -1,0 +1,42 @@
+<template>
+    <form class="slds-p-around_large logincard">
+        <div class="slds-text-align_center" style="padding-left: 20%;padding-right: 20%;">
+        <img src="https://uploads-ssl.webflow.com/6448bf6f0640203c982ca15f/6448bf6f06402019562ca4db_Wissen%20Logo%20Blue.png" alt="Wissen Logo" >
+       </div>
+      
+     <lightning-input class="usrName" type="text" value={usrValue} placeholder="User ID" onchange={handleChangeUsr}> </lightning-input>
+     <template if:true={login}>
+     <lightning-input class="password" type="password" placeholder="Password" onchange={handlepassword}> </lightning-input>
+     <a onclick={handleForgotPw}>Forgot Password ..!</a>
+    </template>
+     <!-- <a  onclick={handleForgotPw}>Forgot Password ..!</a> -->
+
+      <span if:true={isLoaded} class="">
+         <lightning-spinner
+             alternative-text="Loading..." size="small" variant="brand">
+         </lightning-spinner>
+      </span>
+ 
+   <div if:false={isLoaded} class="">
+     <p style="font-size: 12px; color:rgb(3, 161, 17)">{notfy}</p>
+     <br>
+     
+   </div>
+   <template if:true={forgotpg}>
+    <div class="container slds-p-vertical_medium">
+    <lightning-button variant="brand" label="Reset Password" onclick={handleresetLink}> </lightning-button>
+    <lightning-button variant="brand" label="Back" onclick={handleback}> </lightning-button>
+  </div>
+
+  </template>
+
+   <template if:true={login}>
+
+     <div class="container slds-p-vertical_medium">
+    <lightning-button variant="brand" label="Log In" onclick={handleLogin}> </lightning-button>
+    <lightning-button variant="brand" label="Sign Up" onclick={handleSignUp}> </lightning-button>
+  </div>
+</template>
+
+   </form>
+</template>

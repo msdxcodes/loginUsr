@@ -1,0 +1,14 @@
+.logincard{
+     background-color: #ffffff;
+     margin-left: 10%;
+     margin-right: 10%;
+     margin-top: 20%;
+     margin-bottom: 20%;
+     border-radius: 4px;
+     box-shadow: 4px 2px 9px 0px #cecece;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
